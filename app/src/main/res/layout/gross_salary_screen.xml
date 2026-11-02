@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="28dp"
+            android:paddingEnd="28dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="20dp">
+
+            <!-- HEADER SECTION (UPDATED) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:gravity="end|center_vertical"
+                android:importantForAccessibility="no">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/calculator_icon"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@string/calculator_icon_description" />
+
+                <ImageView
+                    android:id="@+id/btnMenu"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:padding="12dp"
+                    android:src="@android:drawable/ic_menu_more"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/open_menu"
+                    app:tint="#E69A60" />
+
+            </LinearLayout>
+
+            <!-- SALARY SUMMARY CARD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingStart="22dp"
+                android:paddingEnd="22dp"
+                android:background="@drawable/bg_salary_card">
+
+                <!-- Gross Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="@drawable/bg_sigma_icon"
+                        android:text="@string/check_symbol"
+                        android:textColor="#222222"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:importantForAccessibility="no"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gross_salary"
+                            android:textColor="#FFFFFF"
+                            android:textSize="21sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txtGross"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zero_amount"
+                            android:textColor="#AAAAAA"
+                            android:textSize="17sp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Tax Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="@drawable/bg_tax_icon"
+                        android:importantForAccessibility="no"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tax"
+                            android:textColor="#FFFFFF"
+                            android:textSize="21sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txtTax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zero_amount"
+                            android:textColor="#AAAAAA"
+                            android:textSize="17sp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Pension Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="@drawable/bg_pension_icon"
+                        android:importantForAccessibility="no"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pension"
+                            android:textColor="#FFFFFF"
+                            android:textSize="21sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txtPension"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zero_amount"
+                            android:textColor="#AAAAAA"
+                            android:textSize="17sp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- TABS SECTION -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/bg_salary_card"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tabNet"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/net"
+                    android:textColor="#AAAAAA"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/tabGross"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_tab_selected"
+                    android:text="@string/gross"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <!-- OVERTIME TAB -->
+                <TextView
+                    android:id="@+id/tabOvertime"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/overtime"
+                    android:textColor="#AAAAAA"
+                    android:textSize="21sp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
+
+            <!-- INPUT SECTION -->
+            <TextView
+                android:id="@+id/lblGrossSalary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/gross_salary"
+                android:textColor="#FFFFFF"
+                android:textSize="23sp"/>
+
+            <LinearLayout
+                android:id="@+id/grossInputContainer"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_salary_card"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/input_symbol"
+                    android:textColor="#E69A60"
+                    android:textSize="32sp"
+                    android:gravity="center"
+                    android:importantForAccessibility="no"/>
+
+                <EditText
+                    android:id="@+id/edtGrossSalary"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/enter_gross_salary"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#999999"
+                    android:textSize="18sp"
+                    android:background="@null"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:autofillHints="none"
+                    android:importantForAutofill="no"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- CALCULATE BUTTON -->
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_calculate_button"
+        android:text="@string/calculate"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:elevation="0dp"/>
+
+</LinearLayout>

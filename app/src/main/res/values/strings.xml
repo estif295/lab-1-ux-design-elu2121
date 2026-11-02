@@ -1,0 +1,44 @@
+<resources>
+    <!-- App Name (Required by Manifest) -->
+    <string name="app_name">Ethiopia Salary Calculator</string>
+
+    <!-- Header & Menu -->
+    <string name="calculator_icon_description">Calculator icon</string>
+    <string name="menu_symbol">⋮</string>
+    <string name="open_menu">Open menu</string>
+    <string name="check_symbol">✓</string>
+
+    <!-- Summary Card -->
+    <string name="gross_salary">Gross Salary</string>
+    <string name="zero_amount">0.00</string>
+    <string name="tax">Tax</string>
+    <string name="pension">Pension</string>
+    <string name="basic_salary">Basic Salary</string>
+
+    <!-- Tabs -->
+    <string name="net">Net</string>
+    <string name="gross">Gross</string>
+    <string name="overtime">Overtime</string>
+
+    <!-- Input Fields & Hints -->
+    <string name="input_symbol">▣</string>
+    <string name="enter_gross_salary">Enter Your Expected Gross Salary</string>
+    <string name="enter_basic_salary">Enter Your Basic Salary</string>
+
+    <!-- Overtime Labels -->
+    <string name="overtime_day">Overtime from 6:00 AM to 10:00 PM</string>
+    <string name="overtime_night">Overtime from 10:00 PM to 6:00 AM</string>
+    <string name="overtime_rest_day">Overtime on a Rest Day</string>
+    <string name="overtime_holiday">Overtime on a Holiday</string>
+
+    <!-- Overtime Input Labels -->
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+
+    <!-- Button -->
+    <string name="calculate">Calculate</string>
+    <string name="salary_calculator">Salary Calculator</string>
+    <string name="salary_calculator_desc">Salary Calculator</string>
+    <string name="ethiopian_salary_calculator">Ethiopian Salary\nCalculator</string>
+    <string name="clock">Clock</string>
+</resources>
